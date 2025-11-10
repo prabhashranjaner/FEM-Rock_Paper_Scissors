@@ -6,7 +6,7 @@ const Overlay = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100dvh;
   background-color: white;
   backdrop-filter: blur(3px);
   z-index: 1000;

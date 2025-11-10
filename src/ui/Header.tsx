@@ -14,11 +14,12 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   border: 5px solid var(--col-gray);
   border-radius: 10px;
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 0.5rem;
   margin: 0 auto;
 
   @media (min-width: 786px) {
     max-width: 90%;
+    padding: 0.8rem 0.8rem;
   }
 
   @media (min-width: 1080px) {

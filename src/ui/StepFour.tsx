@@ -60,7 +60,7 @@ const Button = styled.button`
   font-weight: 600;
   outline: none;
   transition: transform 5000 ease-in-out;
-  font-size: 0.4rem;
+  font-size: 0.6rem;
 
   &:hover {
     transform: scale(1.02);
