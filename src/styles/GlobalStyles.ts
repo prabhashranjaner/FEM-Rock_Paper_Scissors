@@ -36,6 +36,7 @@ body{
     color: white;
     padding: 1.2rem;
      text-transform: uppercase;
+     overflow: hidden;
 }
 
   img {

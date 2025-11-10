@@ -1,10 +1,17 @@
-import { createContext, useContext, useReducer, type ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useReducer,
+  type ReactNode,
+} from "react";
 import type {
   GameActionType,
   GameContextType,
   GameStateType,
   OptionsType,
 } from "../types/gamesTypes";
+import useLocalStorageState from "../hooks/useLocalStorageState";
 
 const GameContext = createContext<GameContextType | null>(null);
 
@@ -52,7 +59,9 @@ function reducer(state: GameStateType, action: GameActionType) {
       let newScore: number = state.points;
       const result = declareResult(state.playerChoice!, state.computerChoice!);
       if (result === "win") newScore = state.points + 1;
-      if (result === "lose" && state.points > 0) newScore = state.points - 1;
+      // if (result === "lose" && state.points > 0) newScore = state.points - 1;
+      if (result === "lose") newScore = state.points - 1;
+
       return { ...state, step: 4, finalResult: result, points: newScore };
     }
 
@@ -69,7 +78,16 @@ export default function GameContextProvider({
 }: {
   children: ReactNode;
 }) {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [value, setValue] = useLocalStorageState("game-score", 0);
+  const [state, dispatch] = useReducer(reducer, {
+    ...initialState,
+    points: value,
+  });
+
+  useEffect(() => {
+    setValue(state.points);
+  }, [state.points, setValue]);
+
   return (
     <GameContext.Provider value={{ state, dispatch }}>
       {children}

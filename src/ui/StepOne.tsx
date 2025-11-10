@@ -11,7 +11,6 @@ const StyledStepOne = styled.div`
   background-image: url(/images/bg-triangle.svg);
   background-repeat: no-repeat;
   background-position: 50%;
-
   gap: 3rem;
 `;
 
@@ -24,8 +23,6 @@ const Top = styled.div`
 const Bottom = styled.div`
   margin: 0 auto;
 `;
-
-// const
 
 const StepOne = () => {
   const { dispatch } = useGame()!;

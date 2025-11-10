@@ -5,6 +5,7 @@ import Game from "./ui/Game";
 
 import GlobalStyles from "./styles/GlobalStyles";
 import GameContextProvider from "./contexts/GameContextProvider";
+import Rules from "./ui/Rules";
 
 const Container = styled.div`
   margin: 0 auto;
@@ -13,7 +14,7 @@ const Container = styled.div`
   height: 100dvh;
 
   @media (min-width: 786px) {
-    max-width: 80%;
+    max-width: 90%;
   }
 
   @media (min-width: 1080px) {
@@ -28,6 +29,7 @@ function App() {
         <GlobalStyles />
         <Header />
         <Game />
+        <Rules />
       </Container>
     </GameContextProvider>
   );

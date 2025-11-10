@@ -19,13 +19,13 @@ const StyledCapsule = styled.button`
   );
 
   @media (min-width: 786px) {
-    width: 12rem;
-    height: 12rem;
+    width: 10rem;
+    height: 10rem;
   }
 
   @media (min-width: 1080px) {
-    width: 13rem;
-    height: 13rem;
+    width: 12rem;
+    height: 12rem;
   }
 
   &::after {
