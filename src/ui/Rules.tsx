@@ -1,4 +1,6 @@
+import { useState } from "react";
 import styled from "styled-components";
+import Modal from "./Modal";
 
 const StyledRules = styled.div`
   position: fixed;
@@ -28,10 +30,16 @@ const Button = styled.button`
 `;
 
 const Rules = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <StyledRules>
-      <Button>Rules</Button>
-    </StyledRules>
+    <>
+      <StyledRules>
+        <Button onClick={() => setIsModalOpen((s) => !s)}>Rules</Button>
+      </StyledRules>
+
+      {isModalOpen && <Modal handleClose={() => setIsModalOpen(false)} />}
+    </>
   );
 };
 
