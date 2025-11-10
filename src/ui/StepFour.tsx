@@ -16,6 +16,7 @@ const ChoiceWrapper = styled.div`
   justify-content: center;
   gap: 2rem;
   text-align: center;
+  align-items: center;
 
   @media (min-width: 786px) {
     gap: 2.5rem;
@@ -26,11 +27,19 @@ const ChoiceWrapper = styled.div`
   }
 `;
 
+const Middle = styled.div`
+  text-align: center;
+`;
+
 const Result = styled.p`
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
   text-align: center;
+  @media (min-width: 500px) {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
 
   @media (min-width: 786px) {
     font-size: 2.8rem;
@@ -42,7 +51,7 @@ const Result = styled.p`
 `;
 
 const Button = styled.button`
-  padding: 0.5rem 3rem;
+  padding: 0.5rem 1rem;
   border-radius: 8px;
   cursor: pointer;
   text-transform: uppercase;
@@ -51,9 +60,15 @@ const Button = styled.button`
   font-weight: 600;
   outline: none;
   transition: transform 5000 ease-in-out;
+  font-size: 0.4rem;
 
   &:hover {
     transform: scale(1.02);
+  }
+
+  @media (min-width: 500px) {
+    font-size: 0.7rem;
+    padding: 0.8rem 2rem;
   }
 
   @media (min-width: 786px) {
@@ -77,7 +92,7 @@ const StepFour = () => {
 
         <LabelSpan>You Picked</LabelSpan>
       </ChoiceWrapper>
-      <div>
+      <Middle>
         <Result>
           {state.finalResult === "win"
             ? "You Win"
@@ -86,7 +101,7 @@ const StepFour = () => {
             : "Draw"}
         </Result>
         <Button onClick={() => dispatch({ type: "reset" })}>Play Again</Button>
-      </div>
+      </Middle>
       <ChoiceWrapper>
         <ElementSelect option={state.computerChoice} />
         <LabelSpan>The House Picked</LabelSpan>

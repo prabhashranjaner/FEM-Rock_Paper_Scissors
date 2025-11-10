@@ -10,7 +10,11 @@ export const Center = styled.div`
 export const LabelSpan = styled.span`
   letter-spacing: 1px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.8rem;
+
+  @media (min-width: 500px) {
+    font-size: 1rem;
+  }
 
   @media (min-width: 786px) {
     font-size: 1.2rem;

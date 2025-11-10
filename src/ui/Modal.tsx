@@ -67,6 +67,9 @@ const StyledModal = styled(Center)`
     &:hover {
       transform: scale(1.02);
     }
+    @media (min-width: 500px) {
+      bottom: 30px;
+    }
 
     @media (min-width: 1080px) {
       top: 50px;

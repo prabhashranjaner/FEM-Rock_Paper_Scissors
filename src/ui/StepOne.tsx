@@ -11,13 +11,17 @@ const StyledStepOne = styled.div`
   background-image: url(/images/bg-triangle.svg);
   background-repeat: no-repeat;
   background-position: 50%;
-  gap: 3rem;
+  gap: 2rem;
+
+  @media (min-width: 500px) {
+    gap: 3rem;
+  }
 `;
 
 const Top = styled.div`
   display: flex;
   justify-content: center;
-  gap: 5rem;
+  gap: 9rem;
 `;
 
 const Bottom = styled.div`

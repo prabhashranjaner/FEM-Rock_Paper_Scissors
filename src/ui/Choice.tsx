@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { LabelSpan, StepContainer } from "../styles/styles";
 
 const StyledChoice = styled(StepContainer)`
-  gap: 5rem;
+  justify-content: space-between;
   @media (min-width: 786px) {
     gap: 6rem;
   }
@@ -18,22 +18,20 @@ const Section = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap: 1rem;
-  @media (min-width: 786px) {
-    gap: 1.6rem;
-  }
-
-  @media (min-width: 1080px) {
-    gap: 2rem;
-  }
+  gap: 2rem;
 `;
 
 const Box = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10rem;
-  height: 10rem;
+  width: 7rem;
+  height: 7rem;
+
+  @media (min-width: 500px) {
+    width: 9rem;
+    height: 9rem;
+  }
 
   @media (min-width: 786px) {
     width: 12rem;
@@ -47,8 +45,8 @@ const Box = styled.div`
 `;
 
 const Circle = styled.div`
-  width: 8rem;
-  height: 8rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   background-color: var(--col-grad-dark);
 

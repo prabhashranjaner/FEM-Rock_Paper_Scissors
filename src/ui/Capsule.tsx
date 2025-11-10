@@ -5,8 +5,8 @@ import { useGame } from "../contexts/GameContextProvider";
 
 const StyledCapsule = styled.button`
   position: relative;
-  width: 9rem;
-  height: 9rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
   outline: none;
   border: none;
@@ -17,6 +17,11 @@ const StyledCapsule = styled.button`
     var(--col-${(props) => props.color}-light),
     var(--col-${(props) => props.color}-dark)
   );
+
+  @media (min-width: 500px) {
+    width: 8rem;
+    height: 8rem;
+  }
 
   @media (min-width: 786px) {
     width: 10rem;

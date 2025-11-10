@@ -27,7 +27,7 @@ const StyledHeader = styled.header`
 `;
 
 const LogoWrapper = styled.div`
-  height: 70px;
+  height: 60px;
 
   @media (min-width: 786px) {
     height: 80px;
@@ -36,11 +36,15 @@ const LogoWrapper = styled.div`
   @media (min-width: 1080px) {
     height: 90px;
   }
+
+  img {
+    object-fit: contain;
+  }
 `;
 const Scorecard = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0.7rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 8px;
   background-color: white;
   text-align: center;
@@ -59,7 +63,7 @@ const Label = styled(LabelSpan)`
 `;
 
 const Score = styled.span`
-  font-size: 2.6rem;
+  font-size: 2rem;
   font-weight: bold;
   color: var(--col-text);
 

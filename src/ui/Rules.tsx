@@ -11,7 +11,7 @@ const StyledRules = styled.div`
 
 const Button = styled.button`
   padding: 0.8rem 3rem;
-  font-size: 18px;
+  font-size: 14px;
   background-color: transparent;
   border: 2px solid white;
   border-radius: 8px;
